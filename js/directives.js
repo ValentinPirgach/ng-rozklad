@@ -7,3 +7,16 @@ R.directive('mainTableDir', function() {
         templateUrl: 'views/mainPlan.html'
     };
 });
+
+
+R.directive('setThisPos', function() {
+    return {
+        restrict: 'A',
+        scope : {showInfoBlock: "@setThisPos"},
+        link: function(scope, element, attr) {
+            element.on('mouseover', function (e) {
+                $('.' + scope.showInfoBlock).css({left : element.parent().position().left, top : element.position().top});
+            });
+        }
+    };
+});

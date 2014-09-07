@@ -1,1 +1,19 @@
-<div ng-controller="mainTableCtrl"></div>
+<div ng-controller="mainTableCtrl">
+    <div class="mainTable">
+        <div class="week">
+            <div class="days" ng-repeat="day in daysModel">
+                <div class="dayName">{{day.day}}</div>
+                <div class="subjects" ng-repeat="subj in week.A[day.key]">
+                    <div class="subject">{{subj.subject}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="mainSchedule">
+            <div class="timeLine" ng-repeat="time in timeLine">
+                <div class="mainTimes startTime">{{time.startTime}}</div>
+                <div class="mainTimes endTime">{{time.endTime}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
