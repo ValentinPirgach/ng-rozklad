@@ -14,6 +14,7 @@ var R = angular.module('R', ['ui.router', 'ngAnimate']).run(function ($rootScope
                         room : '360',
                         building : '05',
                         lesson : 1,
+                        week : 'A',
                         homeTask : ''},
 
                     {   subject : 'Технологічні процеси ТЕС і АЕС',
